@@ -24,7 +24,7 @@ pipeline {
         
         stage('Upload Artifact') {
             steps {
-                sh 'aws s3 cp target/helloworld.war s3://abhirajcicdjava/'
+                sh 'aws s3 cp target/* s3://abhirajcicdjava/'
 }
 }
 }
