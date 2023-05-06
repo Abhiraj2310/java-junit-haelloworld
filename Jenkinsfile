@@ -21,6 +21,12 @@ pipeline {
                 sh 'mvn verify'
             }
         }
+        stage('Deploy') {
+            steps {
+                sh 'docker build -t helloworld .'
+                sh 'docker run -d -p 8081:8080 helloworld'
+            }
+        }
         
         stage('Upload Artifact') {
             steps {
