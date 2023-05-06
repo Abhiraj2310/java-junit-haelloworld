@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Clone') {
             steps {
-             sh 'git clone https://github.com/Abhiraj2310/java-maven-junit-helloworld.git'  
+             sh 'git clone https://github.com/Abhiraj2310/java-junit-haelloworld.git'  
             }      
         }
         stage('Build') {
